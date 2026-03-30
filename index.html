@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace Cart - Alibaba Style</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">Brand<span>.</span></div>
+      <nav class="top-actions">
+        <a href="#">Profile</a>
+        <a href="#">Message</a>
+        <a href="#">Orders</a>
+        <a href="#">My cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="container cart-layout">
+      <div class="cart-card" id="cartCard">
+        <div class="cart-head">
+          <h1 id="cartTitle">My cart (3)</h1>
+          <button class="btn btn-light" id="removeAllBtn">Remove all</button>
+        </div>
+
+        <article class="cart-item" data-id="item-1" data-price="78.99" data-qty="9">
+          <div class="item-main">
+            <div class="thumb-wrap">
+              <img src="../../product-1-56586a.png" alt="T-shirt in cart">
+            </div>
+            <div class="item-copy">
+              <h3>T-shirts with multiple colors, for men and lady</h3>
+              <p>Size: medium, Color: blue, Material: Plastic</p>
+              <p>Seller: Artel Market</p>
+              <div class="item-actions">
+                <button class="btn btn-danger-light js-remove">Remove</button>
+                <button class="btn btn-light btn-blue js-save">Save for later</button>
+              </div>
+            </div>
+          </div>
+          <div class="item-price js-item-price">$78.99</div>
+          <div class="item-qty-wrap">
+            <button class="qty-btn js-dec">-</button>
+            <div class="item-qty js-qty">Qty: 9</div>
+            <button class="qty-btn js-inc">+</button>
+          </div>
+        </article>
+
+        <article class="cart-item" data-id="item-2" data-price="39.00" data-qty="3">
+          <div class="item-main">
+            <div class="thumb-wrap">
+              <img src="../../product-2-345839.png" alt="T-shirt in cart">
+            </div>
+            <div class="item-copy">
+              <h3>T-shirts with multiple colors, for men and lady</h3>
+              <p>Size: medium, Color: blue, Material: Plastic</p>
+              <p>Seller: Best factory LLC</p>
+              <div class="item-actions">
+                <button class="btn btn-danger-light js-remove">Remove</button>
+                <button class="btn btn-light btn-blue js-save">Save for later</button>
+              </div>
+            </div>
+          </div>
+          <div class="item-price js-item-price">$39.00</div>
+          <div class="item-qty-wrap">
+            <button class="qty-btn js-dec">-</button>
+            <div class="item-qty js-qty">Qty: 3</div>
+            <button class="qty-btn js-inc">+</button>
+          </div>
+        </article>
+
+        <article class="cart-item cart-item-last" data-id="item-3" data-price="170.50" data-qty="1">
+          <div class="item-main">
+            <div class="thumb-wrap">
+              <img src="../../product-3.png" alt="Chair in cart">
+            </div>
+            <div class="item-copy">
+              <h3>T-shirts with multiple colors, for men and lady</h3>
+              <p>Size: medium, Color: blue, Material: Plastic</p>
+              <p>Seller: Artel Market</p>
+              <div class="item-actions">
+                <button class="btn btn-danger-light js-remove">Remove</button>
+                <button class="btn btn-light btn-blue js-save">Save for later</button>
+              </div>
+            </div>
+          </div>
+          <div class="item-price js-item-price">$170.50</div>
+          <div class="item-qty-wrap">
+            <button class="qty-btn js-dec">-</button>
+            <div class="item-qty js-qty">Qty: 1</div>
+            <button class="qty-btn js-inc">+</button>
+          </div>
+        </article>
+
+        <div class="cart-foot">
+          <button class="btn btn-primary back-btn">Back to shop</button>
+        </div>
+      </div>
+
+      <aside class="summary-card">
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="subtotalValue">$1403.97</span>
+        </div>
+        <div class="summary-row">
+          <span>Discount:</span>
+          <span class="text-red" id="discountValue">- $60.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Tax:</span>
+          <span class="text-green" id="taxValue">+ $14.00</span>
+        </div>
+        <hr>
+        <div class="summary-total">
+          <span>Total:</span>
+          <strong id="totalValue">$1357.97</strong>
+        </div>
+        <button class="btn btn-green checkout" id="checkoutBtn">Checkout</button>
+        <div class="payments">
+          <span>AMEX</span><span>MC</span><span>PP</span><span>VISA</span><span>APPLE</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container saved-card" id="savedSection">
+      <h2>Saved for later</h2>
+      <div class="saved-grid" id="savedGrid">
+        <article class="saved-item" data-price="99.50">
+          <div class="saved-thumb"><img src="../../product-1-56586a.png" alt="Saved product"></div>
+          <div class="saved-price">$99.50</div>
+          <p>GoPro HERO6 4K Action Camera - Black</p>
+          <button class="btn btn-light btn-blue js-move-to-cart">Move to cart</button>
+        </article>
+        <article class="saved-item" data-price="99.50">
+          <div class="saved-thumb"><img src="../../product-2-345839.png" alt="Saved product"></div>
+          <div class="saved-price">$99.50</div>
+          <p>GoPro HERO6 4K Action Camera - Black</p>
+          <button class="btn btn-light btn-blue js-move-to-cart">Move to cart</button>
+        </article>
+        <article class="saved-item" data-price="99.50">
+          <div class="saved-thumb"><img src="../../product-3.png" alt="Saved product"></div>
+          <div class="saved-price">$99.50</div>
+          <p>GoPro HERO6 4K Action Camera - Black</p>
+          <button class="btn btn-light btn-blue js-move-to-cart">Move to cart</button>
+        </article>
+        <article class="saved-item" data-price="99.50">
+          <div class="saved-thumb"><img src="../../product-1-56586a.png" alt="Saved product"></div>
+          <div class="saved-price">$99.50</div>
+          <p>GoPro HERO6 4K Action Camera - Black</p>
+          <button class="btn btn-light btn-blue js-move-to-cart">Move to cart</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="container promo-banner">
+      <div>
+        <h3>Super discount on more than 100 USD</h3>
+        <p>Have you ever finally just write dummy info</p>
+      </div>
+      <button class="btn promo-btn">Shop now</button>
+    </section>
+
+    <section class="container bottom-row">
+      <article class="coupon-card">
+        <p>Have a coupon?</p>
+        <div class="coupon-input">
+          <input type="text" id="couponInput" placeholder="Add coupon">
+          <button class="btn btn-light btn-blue" id="applyCouponBtn">Apply</button>
+        </div>
+      </article>
+      <div class="features">
+        <article class="feature-item">
+          <span class="feature-icon">🔒</span>
+          <div><h4>Secure payment</h4><p>Have you ever finally just</p></div>
+        </article>
+        <article class="feature-item">
+          <span class="feature-icon">💬</span>
+          <div><h4>Customer support</h4><p>Have you ever finally just</p></div>
+        </article>
+        <article class="feature-item">
+          <span class="feature-icon">🚚</span>
+          <div><h4>Free delivery</h4><p>Have you ever finally just</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand">Brand<span>.</span></div>
+        <p>Best information about the company goes here but now lorem ipsum is.</p>
+      </div>
+      <div class="footer-col">
+        <h4>For users</h4>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+        <a href="#">Settings</a>
+        <a href="#">My Orders</a>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Shipping</a>
+      </div>
+      <div class="footer-col">
+        <h4>App</h4>
+        <a href="#">App Store</a>
+        <a href="#">Google Play</a>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>
